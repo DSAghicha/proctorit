@@ -4,3 +4,5 @@ export { ReactComponent as PageNotFoundSVG } from './images/404.svg'
 
 // Icons
 export { ReactComponent as FirstPage } from './images/icons/first_page.svg'
+export { ReactComponent as DropDownSVG } from './images/icons/dropdown.svg'
+

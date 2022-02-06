@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'CRegular';
+    src: url(../assets/fonts/Regular/PTSans-Narrow.eot);
+    src: url(../assets/fonts/Regular/PTSans-Narrow.eot) format('embedded-opentype'),
+        url('../assets/fonts/Regular/PTSans-Narrow.woff2') format('woff2'),
+        url('../assets/fonts/Regular/PTSans-Narrow.woff') format('woff'),
+        url('../assets/fonts/Regular/PTSans-Narrow.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CBold';
+    src: url(../assets/fonts/Bold/PTSans-Narrow.eot);
+    src: url(../assets/fonts/Bold/PTSans-Narrow.eot) format('embedded-opentype'),
+        url('../assets/fonts/Bold/PTSans-Narrow.woff2') format('woff2'),
+        url('../assets/fonts/Bold/PTSans-Narrow.woff') format('woff'),
+        url('../assets/fonts/Bold/PTSans-Narrow.ttf') format('truetype');
+}

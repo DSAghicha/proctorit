@@ -1,0 +1,39 @@
+@use '../../sass' as *;
+
+.pnf-cr{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    #pnf__logo {
+        height: 15vh;
+    }
+    #pnf__addresser {
+        height: 20vh;
+        path, circle {
+            fill: $theme-clr;
+        }
+    }
+    p {
+        color: $theme-clr;
+        font: 4rem 'CBold'
+
+    }
+    a {
+        padding:  calc($spacing / 2);
+        font-size: 1.5rem;
+        background-color: $theme-clr;
+        border-radius: $borderRadius;
+        color: #FFF;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        svg {
+            fill: #FFF;
+            height: 30px;
+            width: 30px;
+        }
+    }
+}

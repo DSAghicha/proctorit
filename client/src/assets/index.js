@@ -1,0 +1,1 @@
+export {  ReactComponent as GirlAppearingExam } from './girl_appearing_exam.svg'

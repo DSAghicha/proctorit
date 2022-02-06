@@ -4,6 +4,7 @@
     "author": "DSAghicha",
     "license": "MIT",
     "private": true,
+    "description": "ProctorIT is an application that can monitor students throughout exams with or without the need for a teacher's aid.",
     "dependencies": {
         "axios": "^0.25.0",
         "react": "^17.0.2",

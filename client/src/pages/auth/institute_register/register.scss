@@ -1,0 +1,113 @@
+@use '../../../sass'as *;
+
+.ins__register {
+    &__container {
+        width: 100%;
+        height: 100vh;
+        background: url('../../../assets/images/bg.png') $theme-clr no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__central-cr {
+        width: 500px;
+        height: 90%;
+        background-color: $white-clr;
+        border-radius: $borderRadius;
+        position: relative;
+        padding: $spacing * 2;
+        padding-bottom: $spacing / 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        #register {
+            &__home-anchor {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: calc($spacing / 2);
+                display: flex;
+                align-items: center;
+                color: $dark-violet-clr;
+                border-bottom: 1px dashed $dark-violet-clr;
+    
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: $dark-violet-clr;
+                }
+            }
+
+            &__logo {
+
+                width: 100px;
+                height: 100px;
+                flex: 20%;
+            }
+
+            &__form {
+                flex: 80%;
+                margin-top: $spacing * 2;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .registration__inline__cr {
+                    display: flex;
+                    .registration__input-cr {
+                        flex: 1;
+                        margin-left: 10px;
+                    }
+                }
+                .registration__input-cr{
+                    display: flex;
+                    width: 100%;
+                    border: 1px solid rgba($dark-violet-clr, 10%);
+                    border-radius: $borderRadius;
+                    padding: calc($spacing / 2);
+
+                    input, textarea {
+                        width: 100%;
+                        outline: none;
+                        border: none;
+                        font: 18px 'CRegular';
+                        resize: none;
+                    }
+
+                    input[type=number] {
+                        appearance: none;
+                        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                            appearance: none;
+                            margin: 0;
+                        }
+                    }
+
+                    &:focus-within {
+                        border-color: $theme-clr;
+                        svg {
+                            fill: $theme-clr;
+                        }
+                    }    
+                }
+                #registration__submit__btn{
+                    height: 5vh;
+                    border-radius: $borderRadius;
+                    background-color: $theme-clr;
+                    color: $white-clr;
+                    outline: none;
+                    border: none;
+                    font: 22px 'CBold';
+                    letter-spacing: 1.3px;
+
+                    &:disabled {
+                        background-color: rgba($dark-violet-clr, 10%);
+                    }
+                }
+            }
+        }
+    }
+}

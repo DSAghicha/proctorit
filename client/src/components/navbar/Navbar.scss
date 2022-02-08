@@ -1,6 +1,7 @@
 @use '../../sass'as *;
 
 header {
+    position: fixed;
     background-color: $white-clr;
     width: 100%;
     max-height: 9vh;

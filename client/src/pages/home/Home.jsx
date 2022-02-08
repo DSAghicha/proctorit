@@ -20,7 +20,7 @@ const Home = () => {
                     </ul>
                     <div className="cta-cr">
                         <Link to='/demo'>Take a demo test</Link>
-                        <Link to='/institute-signup'>Register Institute</Link>
+                        <Link to='/auth/institute-signup'>Register Institute</Link>
                     </div>
                 </div>
                 <GirlAppearingExam/>

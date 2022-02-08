@@ -1,25 +1,96 @@
-@use '../../sass' as *;
+@use '../../sass'as *;
 
 header {
-    background-color: #FFF;
+    background-color: $white-clr;
     width: 100%;
-    height: 9vh;
+    max-height: 9vh;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 20px 7%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
+    z-index: 10;
+
     .logo-cr {
         svg {
-            height: 50px;
+            height: 60px;
         }
     }
+
     nav {
         width: 70%;
-        ul {
+
+        .nav__menu {
             display: flex;
             justify-content: space-evenly;
             list-style: none;
+
+            &__item {
+                padding: $spacing calc($spacing / 2);
+                background-color: $white-clr;
+                border-radius: $borderRadius;
+                transition: filter 300ms ease-in;
+                letter-spacing: 1.2px;
+                cursor: pointer;
+                position: relative;
+                user-select: none;
+
+                &:hover{
+                    filter: brightness(0.9);
+                }
+
+                .nav__submenu {
+                    &__title {
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            display: block;
+                            margin: auto;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    background-color: $white-clr;
+                    list-style: none;
+                    width: 100%;
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+
+                    &__item {
+                        padding: $spacing calc($spacing / 2);
+                        transition: filter 300ms ease-in;
+                        letter-spacing: 1.2px;
+                        background-color: $white-clr;
+                        a {
+                        cursor: pointer;
+
+                        }
+                    }
+                }
+
+                .svgFlip {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &:last-child {
+                    background-color: $theme-clr;
+                    color: $white-clr;
+                    transition: transform 300ms ease-in-out;
+
+                    &:hover { 
+                        transform: scale(1.1);
+                        filter: brightness(1);
+                    }
+                }
+            }
         }
     }
+
 }

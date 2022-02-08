@@ -3,6 +3,7 @@ import './register.scss'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Logo, FirstPage } from '../../../assets'
+import countriesData from './countries.json'
 
 const RegisterInstitute = () => {
     const [name, setName] = useState('')
@@ -14,7 +15,11 @@ const RegisterInstitute = () => {
     const [instituteZipCode, setInstituteZipCode] = useState('')
     const [instituteCity, setInstituteCity] = useState('')
     const [instituteState, setInstituteState] = useState('')
-    const [instituteCountry, setInstituteCountry] = useState('')
+    const [instituteCountry, setInstituteCountry] = useState('India')
+
+    const countries = countriesData.map((country, key) => {
+        return <option key={key} value={country.name}>{country.name}</option>
+    })
 
     return(
         <div className="ins__register__container">
@@ -122,13 +127,20 @@ const RegisterInstitute = () => {
                         </div>
                         {/* COUNTRY */}
                         <div className="registration__input-cr">
-                            <input
+                            {/* <input
                                 type="text"
                                 name="registration__institute-country"
                                 id="registration__institute-country"
                                 placeholder='Country'
                                 value={instituteCountry}
-                                onChange={(e) => setInstituteCountry(e.target.value)} />
+                                onChange={(e) => setInstituteCountry(e.target.value)} /> */}
+                            <select 
+                                name="registration__institute-country"
+                                id="registration__institute-country"
+                                value={instituteCountry}
+                                onChange={(e) => setInstituteCountry(e.target.value)}>
+                                {countries}
+                            </select>
                         </div>
                     </div>
                     {/* SUBMIT BUTTON */}

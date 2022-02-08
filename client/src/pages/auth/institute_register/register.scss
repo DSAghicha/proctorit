@@ -86,6 +86,14 @@
                         }
                     }
 
+                    #registration__institute-country {
+                        width: 100%;
+                        outline: none;
+                        border: none;
+                        font: 18px 'CRegular';
+
+                    }
+
                     &:focus-within {
                         border-color: $theme-clr;
                         svg {

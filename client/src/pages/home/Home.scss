@@ -3,4 +3,81 @@
 .home {
     width: 100%;
     height: 100vh;
+    padding: 3em;
+    padding-top: 9vh;
+    display: flex;
+    position: relative;
+    .info {
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; 
+        h1 {
+            font: 4rem 'CBold';
+            margin-bottom: 10px;
+        }
+        p {
+            font: 2rem 'CBold';
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: '-';
+            li {
+                margin-left: 10px;
+                font-size: 1.5rem;
+                padding-left: 10px;
+            }
+        }
+
+        .cta-cr {
+            width: 80%;
+            padding: 0 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            a {
+                padding: calc($spacing / 1.5) calc($spacing * 3);
+                border-radius: $borderRadius;
+                font: 1.2rem 'CRegular';
+                transition: all 550ms ease-in-out;
+                &:first-child {
+                    background-color: $theme-clr;
+                    color: #FFF;
+                }
+                &:last-child{
+                    border: 2px solid $theme-clr;
+                    color: $theme-clr;
+                }
+                &:hover {
+                    background-color: #FFF;
+                    border: 2px solid $dark-violet-clr;
+                    color: $dark-violet-clr;
+                }
+            }
+        }
+    }
+    svg {
+        flex: 50%;
+    }
+    .scroll-icon {
+        width: 20px;
+        height: 30px;
+        background-color: $theme-clr;
+        position: absolute;
+        bottom: 10px;
+        transform: translateX(-50%);
+        left: 50%;
+        border-radius: 20px;
+        padding: calc($spacing / 3) 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        .circle {
+            width: 5px;
+            height: 5px;
+            background-color: #FFF;
+            border-radius: 50%;
+        }
+    }
 }

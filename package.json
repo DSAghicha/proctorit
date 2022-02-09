@@ -1,0 +1,25 @@
+{
+    "name": "proctorit",
+    "version": "0.1.0",
+    "description": "ProctorIT is an application that can monitor students throughout exams with or without the need for a teacher's aid.",
+    "main": "server.js",
+    "author": "DSAghicha",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start": "node server.js",
+        "server": "nodemon server.js",
+        "dev": "concurrently \"npm run server\" \" cd client && npm run start\" "
+
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.2",
+        "mongoose": "^6.2.1"
+    },
+    "devDependencies": {
+        "concurrently": "^7.0.0",
+        "nodemon": "^2.0.15"
+    }
+}

@@ -17,6 +17,10 @@ app.use('/auth', require('./routes/auth'))
 
 const PORT = process.env.PORT || 2022
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"))
+}
+
 const server = app.listen(PORT, () => console.log(`Server is running @ ${PORT}`))
 
 process.on('unhandledRejection',(err) =>{

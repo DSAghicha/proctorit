@@ -10,7 +10,7 @@
         "start": "node server.js",
         "server": "nodemon server.js",
         "dev": "concurrently \"yarn server\" \" cd client && yarn start\" ",
-        "heroku-postbuild":  "NPM_CONFIG_PRODUCTION=false yarn install --prefix client && yarn build --prefix client"
+        "heroku-postbuild":  "NPM_CONFIG_PRODUCTION=false yarn --cwd client install && yarn --cwd client build"
 
     },
     "dependencies": {

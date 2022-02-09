@@ -9,7 +9,7 @@
     "scripts": {
         "start": "node server.js",
         "server": "nodemon server.js",
-        "dev": "concurrently \"npm run server\" \" cd client && npm run start\" "
+        "dev": "concurrently \"yarn server\" \" cd client && yarn start\" "
 
     },
     "dependencies": {
